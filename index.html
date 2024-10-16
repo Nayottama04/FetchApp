@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="light-mode"> <!-- Default ke mode terang -->
+    <div class="container">
+        <h1>Fetch Data</h1>
+
+        <!-- Tombol Toggle Mode -->
+        <button id="toggleMode">Switch to Dark Mode</button>
+
+        <div class="input-container">
+            <label for="searchType">Choose Fetch Type:</label>
+            <select id="searchType" onchange="toggleInput()">
+                <option value="allUsers">All Users</option>
+                <option value="userById">User by ID</option>
+                <option value="userPostsById">Posts by User ID</option>
+            </select>
+        
+            <div id="userIdInput" class="hidden">
+                <label for="userId">Enter User ID:</label>
+                <input type="number" id="userId" min="1" placeholder="User ID">
+            </div>
+        
+            <button onclick="fetchData()">Fetch Data</button>
+        </div>
+        
+
+        <h2>API Response:</h2>
+        <div id="apiResponse"></div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
